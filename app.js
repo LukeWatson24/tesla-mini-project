@@ -26,8 +26,8 @@ window.addEventListener("scroll", () => {
 });
 
 //Landing page animations
-gsap.from([backgroundImage, headerLogo], {
-  opacity: 0,
+gsap.to([backgroundImage, headerLogo], {
+  opacity: 1,
   stagger: 0.75,
   duration: 1,
 });
