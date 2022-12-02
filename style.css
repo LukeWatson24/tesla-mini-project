@@ -1,0 +1,342 @@
+/*#region reset*/
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+code,
+em,
+img,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+b,
+u,
+i,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+main,
+canvas,
+embed,
+footer,
+header,
+nav,
+section,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+/*#endregion*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0%;
+  z-index: 999;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 100ms ease-in-out;
+}
+nav .nav-logo {
+  cursor: pointer;
+  height: 100%;
+  width: 20%;
+}
+nav .nav-links {
+  width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+}
+nav .nav-links li {
+  cursor: pointer;
+}
+nav .nav-links li a {
+  width: auto;
+}
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: all 0.2s ease;
+}
+nav a:hover {
+  transform: translateY(3px);
+}
+
+.nav-scrolled {
+  background-color: rgb(218, 218, 218);
+}
+
+.wrapper {
+  min-height: 100vh;
+  background-color: rgb(8, 8, 8);
+}
+.wrapper h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: rgb(218, 218, 218);
+  font-weight: 500;
+  height: 10%;
+  margin-bottom: 5rem;
+}
+
+.section {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  isolation: isolate;
+}
+header .header-image {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+header .header-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .header-content-wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-content-wrapper .header-content {
+  margin-top: 100px;
+  width: 60vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+header .header-content-wrapper .header-content .header-top {
+  text-align: center;
+}
+header .header-content-wrapper .header-content .header-top .landing-logo {
+  height: 3rem;
+}
+header .header-content-wrapper .header-content .header-top p {
+  font-family: "Quicksand", sans-serif;
+}
+header .header-content-wrapper .header-content .header-bottom {
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+header .header-content-wrapper .header-content .header-bottom a {
+  text-decoration: none;
+  border-radius: 10px;
+  background: none;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+}
+header .header-content-wrapper .header-content .header-bottom a span {
+  -webkit-animation: arrow-bounce 5s ease-in-out infinite;
+          animation: arrow-bounce 5s ease-in-out infinite;
+  margin: 0;
+  color: rgb(218, 218, 218);
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about-section h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(218, 218, 218);
+  margin-bottom: 1rem;
+}
+.about-section p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  color: rgb(218, 218, 218);
+}
+.about-section button {
+  background-color: rgb(218, 218, 218);
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.about-section a {
+  transition: all 0.25s ease;
+}
+.about-section button:hover {
+  background-color: #333;
+  color: rgb(218, 218, 218);
+}
+.about-section .content {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: space-evenly;
+  margin-bottom: 5rem;
+}
+.about-section .content .has-img {
+  background-color: rgb(218, 218, 218);
+  height: 22.5vw;
+  width: 40vw;
+  display: flex;
+  align-items: center;
+}
+.about-section .content .has-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about-section .content .has-text {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.car-section {
+  height: 100vh;
+}
+.car-section .content {
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+}
+.car-section .content .left {
+  height: 28.125vw;
+  width: 50vw;
+}
+.car-section .content .left img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.car-section .content .right {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.car-section .content .right p {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  color: rgb(218, 218, 218);
+  margin-bottom: 1rem;
+}
+
+@-webkit-keyframes arrow-bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes arrow-bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}/*# sourceMappingURL=style.css.map */
